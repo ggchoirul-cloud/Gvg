@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GILZ // Web &amp; Bot Developer Portfolio</title>
+<meta name="description" content="Portfolio Gilz — Web Developer &amp; Bot Architect dari Surabaya. Spesialis Telegram Bot, WhatsApp Bot, Payment Gateway, dan Web Dashboard.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Spline 3D Viewer -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
+</head>
+<body>
+
+<!-- ============================== -->
+<!-- LOADING SCREEN -->
+<!-- ============================== -->
+<div class="loader-screen" id="loaderScreen">
+    <div class="loader-comic">
+        <span class="loader-mark">GILZ</span>
+    </div>
+    <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBarFill"></div>
+    </div>
+    <p class="loader-caption">LOADING EXPERIENCE</p>
+</div>
+
+<!-- ============================== -->
+<!-- CUSTOM CURSOR -->
+<!-- ============================== -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============================== -->
+<!-- SCROLL PROGRESS -->
+<!-- ============================== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============================== -->
+<!-- NAVBAR -->
+<!-- ============================== -->
+<header class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <span class="logo-text">GILZ<span class="logo-dot">!</span></span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active" data-link>Home</a>
+            <a href="#about" class="nav-link" data-link>About</a>
+            <a href="#skills" class="nav-link" data-link>Skills</a>
+            <a href="#projects" class="nav-link" data-link>Projects</a>
+            <a href="#gallery" class="nav-link" data-link>Gallery</a>
+            <a href="#experience" class="nav-link" data-link>Experience</a>
+            <a href="#services" class="nav-link" data-link>Services</a>
+            <a href="#testimonials" class="nav-link" data-link>Testimonials</a>
+            <a href="#contact" class="nav-link" data-link>Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn-darkmode" id="btnDarkMode" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="btn-burger" id="btnBurger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ============================== -->
+<!-- HERO -->
+<!-- ============================== -->
+<section class="hero hero-robot" id="home">
+    <div class="grain-overlay"></div>
+    <div class="particle-field" id="particleField"></div>
+
+    <div class="hero-container hero-robot-container" data-aos="fade-up">
+
+        <h1 class="hero-title-huge">BOT<span class="text-outline">DEV</span></h1>
+
+        <div class="hero-robot-stage">
+            <!-- GANTI URL DI BAWAH INI nganggo link scene.splinecode asli sing kok jupuk soko Spline -->
+            <spline-viewer id="heroSpline" class="spline-robot" url="" loading-anim-type="none"></spline-viewer>
+
+            <a href="#contact" class="orbit-badge ripple-btn">
+                <svg viewBox="0 0 100 100" class="orbit-badge-text">
+                    <path id="orbitPath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none"/>
+                    <text><textPath href="#orbitPath">GET STARTED • HIRE ME • </textPath></text>
+                </svg>
+                <i class="fa-solid fa-arrow-up-right orbit-badge-icon"></i>
+            </a>
+        </div>
+
+        <div class="hero-bottom-row">
+            <div class="hero-stats-row">
+                <div class="hero-stat"><h3>30+</h3><p>PROJECT<br>SELESAI</p></div>
+                <div class="hero-stat"><h3>15+</h3><p>CLIENT<br>PUAS</p></div>
+                <div class="hero-stat"><h3>24/7</h3><p>BOT<br>UPTIME</p></div>
+            </div>
+            <p class="hero-tagline">
+                BOT ARCHITECT &amp; FULL-STACK DEVELOPER DARI SURABAYA — BIKIN TELEGRAM BOT,
+                WHATSAPP BOT, SAMPAI PAYMENT DASHBOARD YANG JALAN MULUS 24 JAM NONSTOP.
+            </p>
+        </div>
+
+        <div class="hero-socials">
+            <a href="https://www.instagram.com/langotwmekk/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/Langgg12zz" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://wa.me/6287827101306" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <a href="#about" class="scroll-down-indicator" aria-label="Scroll down">
+        <svg viewBox="0 0 100 100" class="scroll-circle-text">
+            <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+            <text><textPath href="#circlePath">SCROLL DOWN • KEEP EXPLORING • </textPath></text>
+        </svg>
+        <i class="fa-solid fa-arrow-down"></i>
+    </a>
+</section>
+
+<!-- ============================== -->
+<!-- ABOUT -->
+<!-- ============================== -->
+<section class="section about" id="about">
+    <span class="ghost-text">ABOUT</span>
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">WHO WE ARE</span>
+        <h2 class="section-title">ABOUT ME</h2>
+    </div>
+
+    <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right">
+            <div class="avatar-panel">
+                <div class="avatar-circle">
+                    <span>G</span>
+                </div>
+                <div class="avatar-badge">
+                    <i class="fa-solid fa-check"></i> Available for hire
+                </div>
+            </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+            <p class="about-text">
+                Aku Gilz, developer asal Surabaya yang fokus di bot automation dan payment system.
+                Mulai dari Telegram bot buat reseller top-up game, WhatsApp bot AI assistant,
+                sampai dashboard pembayaran web — semua aku bangun dari nol dengan arsitektur yang rapi
+                dan anti-hang.
+            </p>
+
+            <div class="about-stats">
+                <div class="stat-box" data-count="30">
+                    <h3 class="counter">0</h3>
+                    <p>Project</p>
+                </div>
+                <div class="stat-box" data-count="15">
+                    <h3 class="counter">0</h3>
+                    <p>Client</p>
+                </div>
+                <div class="stat-box" data-count="3">
+                    <h3 class="counter">0</h3>
+                    <p>Tahun Ngoding</p>
+                </div>
+                <div class="stat-box" data-count="999">
+                    <h3 class="counter">0</h3>
+                    <p>Cangkir Kopi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- SKILLS -->
+<!-- ============================== -->
+<section class="section skills" id="skills">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">WHAT I KNOW</span>
+        <h2 class="section-title">MY <span class="text-stroke">SKILLS</span></h2>
+    </div>
+
+    <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+            <i class="fa-brands fa-js skill-icon"></i>
+            <h4>JavaScript</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="50">
+            <i class="fa-brands fa-node-js skill-icon"></i>
+            <h4>Node.js</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="92"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <h4>HTML5</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="98"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+            <i class="fa-brands fa-css3-alt skill-icon"></i>
+            <h4>CSS3</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fa-solid fa-database skill-icon"></i>
+            <h4>PostgreSQL</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+            <i class="fa-solid fa-leaf skill-icon"></i>
+            <h4>MongoDB</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fa-brands fa-react skill-icon"></i>
+            <h4>React / Next.js</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+            <i class="fa-brands fa-git-alt skill-icon"></i>
+            <h4>Git &amp; Github</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fa-solid fa-plug skill-icon"></i>
+            <h4>REST API</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="93"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
+            <i class="fa-brands fa-docker skill-icon"></i>
+            <h4>Docker</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fa-brands fa-python skill-icon"></i>
+            <h4>Python</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="550">
+            <i class="fa-solid fa-robot skill-icon"></i>
+            <h4>Bot Framework</h4>
+            <div class="progress-bar"><div class="progress-fill" data-width="97"></div></div>
+        </div>
+    </div>
+
+    <div class="circular-skills" data-aos="fade-up">
+        <div class="circle-skill">
+            <svg viewBox="0 0 120 120">
+                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                <circle class="circle-fill" cx="60" cy="60" r="50" data-percent="95"></circle>
+            </svg>
+            <span class="circle-label">95%<br><small>Backend</small></span>
+        </div>
+        <div class="circle-skill">
+            <svg viewBox="0 0 120 120">
+                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                <circle class="circle-fill" cx="60" cy="60" r="50" data-percent="88"></circle>
+            </svg>
+            <span class="circle-label">88%<br><small>Frontend</small></span>
+        </div>
+        <div class="circle-skill">
+            <svg viewBox="0 0 120 120">
+                <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                <circle class="circle-fill" cx="60" cy="60" r="50" data-percent="97"></circle>
+            </svg>
+            <span class="circle-label">97%<br><small>Bot Dev</small></span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- SERVICES -->
+<!-- ============================== -->
+<section class="section services" id="services">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">WHAT I DO</span>
+        <h2 class="section-title">MY <span class="text-stroke">SERVICES</span></h2>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="0">
+            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Web Development</h3>
+            <p>Bikin website &amp; dashboard modern, responsive, dari landing page sampai web app full-stack.</p>
+        </div>
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="100">
+            <div class="service-icon"><i class="fa-brands fa-telegram"></i></div>
+            <h3>Bot Development</h3>
+            <p>Telegram &amp; WhatsApp bot custom — auto order, auto respon, sampai AI assistant.</p>
+        </div>
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="200">
+            <div class="service-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+            <h3>Payment Gateway</h3>
+            <p>Integrasi QRIS, e-wallet, dan payment gateway lain langsung ke sistem/bot kamu.</p>
+        </div>
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="300">
+            <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Backend &amp; API</h3>
+            <p>Arsitektur backend rapi, database terstruktur, REST API yang gampang di-maintain.</p>
+        </div>
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="400">
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Automation</h3>
+            <p>Otomatisasi proses manual jadi sistem yang jalan sendiri 24/7 tanpa capek.</p>
+        </div>
+        <div class="service-card comic-panel" data-aos="flip-left" data-aos-delay="500">
+            <div class="service-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h3>Frontend</h3>
+            <p>UI interaktif dan enak dipakai, dari komponen kecil sampai desain sistem penuh.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- PROJECTS -->
+<!-- ============================== -->
+<section class="section projects" id="projects">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">SELECTED WORK</span>
+        <h2 class="section-title">MY <span class="text-stroke">PROJECTS</span></h2>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up">
+            <div class="project-thumb thumb-1"><i class="fa-solid fa-credit-card"></i></div>
+            <div class="project-body">
+                <h3>NEXA PAY</h3>
+                <p>Dashboard payment gateway merchant — Next.js, TypeScript, Prisma, PostgreSQL.</p>
+                <div class="tech-badges">
+                    <span>Next.js</span><span>TypeScript</span><span>Prisma</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-thumb thumb-2"><i class="fa-brands fa-telegram"></i></div>
+            <div class="project-body">
+                <h3>NEXA Telegram Bot</h3>
+                <p>Bot reseller top-up game &amp; PPOB, katalog dua-level, sistem antrian order tahan banting.</p>
+                <div class="tech-badges">
+                    <span>Node.js</span><span>Telegraf</span><span>PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-thumb thumb-3"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-body">
+                <h3>GERV AI (Nexa Guard)</h3>
+                <p>WhatsApp bot AI assistant dengan menu box-style unicode dan sistem rules interaktif.</p>
+                <div class="tech-badges">
+                    <span>Baileys</span><span>Node.js</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-thumb thumb-4"><i class="fa-solid fa-headset"></i></div>
+            <div class="project-body">
+                <h3>CS Telegram Bot</h3>
+                <p>Sistem tiket customer service dengan live chat relay, Clean Architecture.</p>
+                <div class="tech-badges">
+                    <span>MongoDB</span><span>Mongoose</span><span>Node.js</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-thumb thumb-5"><i class="fa-solid fa-clapperboard"></i></div>
+            <div class="project-body">
+                <h3>BratPatrick</h3>
+                <p>Discord bot video generator dengan canvas rendering &amp; FFmpeg encoding.</p>
+                <div class="tech-badges">
+                    <span>Node.js</span><span>Canvas</span><span>FFmpeg</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-thumb thumb-6"><i class="fa-solid fa-film"></i></div>
+            <div class="project-body">
+                <h3>Toburik</h3>
+                <p>Discord bot video generator kedua, production-ready package siap pakai.</p>
+                <div class="tech-badges">
+                    <span>Node.js</span><span>Canvas</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="project-thumb thumb-7"><i class="fa-solid fa-image"></i></div>
+            <div class="project-body">
+                <h3>Winkit</h3>
+                <p>WhatsApp bot image processing — efek sepia, blur, rotate, crop pakai Jimp.</p>
+                <div class="tech-badges">
+                    <span>Baileys</span><span>Jimp</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card comic-panel tilt-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="project-thumb thumb-8"><i class="fa-solid fa-qrcode"></i></div>
+            <div class="project-body">
+                <h3>QRIS Auto-Payment</h3>
+                <p>Generate QRIS otomatis di chat WhatsApp dengan polling konfirmasi real-time.</p>
+                <div class="tech-badges">
+                    <span>Baileys</span><span>Midtrans</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-mini">Private Repo</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- GALLERY -->
+<!-- ============================== -->
+<section class="section gallery" id="gallery">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">VISUAL LOG</span>
+        <h2 class="section-title">MY <span class="text-stroke">GALLERY</span></h2>
+    </div>
+
+    <div class="masonry-grid">
+        <div class="masonry-item gitem-1" data-aos="zoom-in" data-lightbox-label="Telegram Bot UI"><i class="fa-brands fa-telegram"></i></div>
+        <div class="masonry-item gitem-2" data-aos="zoom-in" data-lightbox-label="WhatsApp Automation"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="masonry-item gitem-3" data-aos="zoom-in" data-lightbox-label="Payment Dashboard"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="masonry-item gitem-4" data-aos="zoom-in" data-lightbox-label="Discord Bot"><i class="fa-brands fa-discord"></i></div>
+        <div class="masonry-item gitem-5" data-aos="zoom-in" data-lightbox-label="QRIS Payment Flow"><i class="fa-solid fa-qrcode"></i></div>
+        <div class="masonry-item gitem-6" data-aos="zoom-in" data-lightbox-label="Database Design"><i class="fa-solid fa-database"></i></div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- LIGHTBOX -->
+<!-- ============================== -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lightbox-box">
+        <div class="lightbox-icon" id="lightboxIcon"></div>
+        <p id="lightboxLabel"></p>
+    </div>
+</div>
+
+<!-- ============================== -->
+<!-- EXPERIENCE -->
+<!-- ============================== -->
+<section class="section experience" id="experience">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">THE JOURNEY</span>
+        <h2 class="section-title">MY <span class="text-stroke">EXPERIENCE</span></h2>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content comic-panel">
+                <span class="timeline-year">2024</span>
+                <h3>Mulai Freelance Bot Developer</h3>
+                <p>Membangun bot Telegram &amp; WhatsApp pertama untuk automasi order dan customer service.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content comic-panel">
+                <span class="timeline-year">2025</span>
+                <h3>Ekspansi ke Payment System</h3>
+                <p>Integrasi berbagai payment gateway (QRIS, e-wallet) ke dalam bot &amp; sistem reseller.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content comic-panel">
+                <span class="timeline-year">2026</span>
+                <h3>Membangun Ekosistem NEXA</h3>
+                <p>Merancang NEXA Telegram Bot dan NEXA PAY — dashboard web merchant full-stack.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content comic-panel">
+                <span class="timeline-year">Sekarang</span>
+                <h3>Terus Belajar &amp; Berkembang</h3>
+                <p>Eksplorasi arsitektur clean code, automation lanjutan, dan desain UI yang lebih matang.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- TESTIMONIALS -->
+<!-- ============================== -->
+<section class="section testimonials" id="testimonials">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">WORDS FROM CLIENTS</span>
+        <h2 class="section-title">TESTIMONIALS</h2>
+    </div>
+
+    <div class="testi-slider" data-aos="fade-up">
+        <div class="testi-track" id="testiTrack">
+            <div class="testi-card">
+                <div class="speech-bubble testi-bubble">
+                    <p>"Bot-nya jalan mulus 24 jam, gak pernah hang. Order masuk auto keproses, mantap!"</p>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">R</div>
+                    <div>
+                        <h4>Reseller Top-Up</h4>
+                        <span>Pengguna NEXA Bot</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="speech-bubble testi-bubble">
+                    <p>"Dashboard payment-nya rapi dan gampang dipakai, laporan transaksi jadi jelas tiap hari."</p>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">M</div>
+                    <div>
+                        <h4>Merchant Digital</h4>
+                        <span>Pengguna NEXA PAY</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="speech-bubble testi-bubble">
+                    <p>"Auto respon WhatsApp-nya kerasa natural, chat pelanggan langsung kejawab cepat."</p>
+                </div>
+                <div class="testi-author">
+                    <div class="testi-avatar">D</div>
+                    <div>
+                        <h4>Owner Toko Online</h4>
+                        <span>Pengguna GERV AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testi-nav">
+            <button id="testiPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="testi-dots" id="testiDots"></div>
+            <button id="testiNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- CONTACT -->
+<!-- ============================== -->
+<section class="section contact" id="contact">
+    <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">LET'S TALK</span>
+        <h2 class="section-title">GET IN <span class="text-stroke">TOUCH</span></h2>
+    </div>
+
+    <div class="contact-grid">
+        <form class="contact-form comic-panel" id="contactForm" data-aos="fade-right">
+            <div class="form-group">
+                <label for="fName">Nama</label>
+                <input type="text" id="fName" name="name" required placeholder="Nama kamu">
+            </div>
+            <div class="form-group">
+                <label for="fEmail">Email</label>
+                <input type="email" id="fEmail" name="email" required placeholder="email@kamu.com">
+            </div>
+            <div class="form-group">
+                <label for="fSubject">Subject</label>
+                <input type="text" id="fSubject" name="subject" required placeholder="Mau ngobrolin apa?">
+            </div>
+            <div class="form-group">
+                <label for="fMessage">Message</label>
+                <textarea id="fMessage" name="message" rows="5" required placeholder="Tulis pesanmu di sini..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary ripple-btn full-width">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+
+        <div class="contact-info" data-aos="fade-left">
+            <div class="speech-bubble">
+                <p>Punya project bot atau web yang mau digarap? Gaskeun, kontak aku lewat channel di bawah!</p>
+            </div>
+            <div class="social-links-contact">
+                <a href="https://wa.me/6287827101306" target="_blank" rel="noopener" class="social-link-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.instagram.com/langotwmekk/" target="_blank" rel="noopener" class="social-link-item"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#" class="social-link-item"><i class="fa-brands fa-github"></i> Github</a>
+                <a href="#" class="social-link-item"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="social-link-item"><i class="fa-brands fa-discord"></i> Discord</a>
+                <a href="https://t.me/Langgg12zz" target="_blank" rel="noopener" class="social-link-item"><i class="fa-brands fa-telegram"></i> Telegram</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================== -->
+<!-- FOOTER -->
+<!-- ============================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">GILZ<span class="logo-dot">!</span></div>
+        <nav class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/langotwmekk/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="https://t.me/Langgg12zz" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+        </div>
+        <p class="footer-copy">&copy; <span id="yearNow"></span> GILZ. All rights reserved. Made with <i class="fa-solid fa-heart"></i> in Surabaya.</p>
+    </div>
+</footer>
+
+<!-- ============================== -->
+<!-- TOAST -->
+<!-- ============================== -->
+<div class="toast-comic" id="toastComic"></div>
+
+<!-- ============================== -->
+<!-- BACK TO TOP -->
+<!-- ============================== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
